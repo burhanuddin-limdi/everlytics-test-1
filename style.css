@@ -73,6 +73,7 @@ body {
   padding: 10px 30px;
   transition: background-color 0.3s;
   cursor: pointer;
+  width: 150px;
 }
 
 .bottom_buttons button:hover {
