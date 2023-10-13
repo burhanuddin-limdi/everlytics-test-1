@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="fields">
+          <div class="field-wrapper">
+            <label for="source">Select your source:</label>
+            <div class="field">
+              <input type="text" value="Google Cloud Storage" readonly />
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <label for="pipeline_name">Provide a name for pipeline:</label>
+            <div class="field">
+              <input
+                id="pipeline_name"
+                type="text"
+                placeholder="e.g., cust_shop_energy_gkateway001"
+              />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, cannot start with '-', '_', '+', and
+            contain no special characters.
+          </p>
+          <div class="field-wrapper">
+            <label for="project_name">GCS project name:</label>
+            <div class="field">
+              <input id="project_name" type="text" placeholder="project-id" />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, start with a letter or number, and
+            contain no special characters.
+          </p>
+          <div class="field-wrapper">
+            <label for="bucket_name">GCS bucket name:</label>
+            <div class="field">
+              <input
+                id="bucket_name"
+                type="text"
+                placeholder="gs://your-bucket"
+              />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, start with a letter or number, and
+            contain no special characters.
+          </p>
+          <div class="field-wrapper">
+            <label for="file_location">Input Cloud Storage File(s):</label>
+            <div class="field">
+              <input
+                id="file_location"
+                type="text"
+                placeholder="GCS location of your files"
+              />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, start with a letter or number, and
+            contain no special characters.
+          </p>
+          <div class="field-wrapper">
+            <label for="gcs_credentials">GCS credentials:</label>
+            <div class="field">
+              <input id="gcs_credentials" type="password" />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, start with a letter or number, and
+            contain no special characters.
+          </p>
+          <div class="field-wrapper">
+            <label for="time">Run Every:</label>
+            <div class="field">
+              <input id="time" type="text" placeholder="minutes" />
+            </div>
+          </div>
+          <p class="validation_string">
+            Input must be 5+ characters, start with a letter or number, and
+            contain no special characters.
+          </p>
+          <div class="bottom_buttons">
+            <button onclick="validateForm(event)">Create</button>
+            <button onclick="clearForm()">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

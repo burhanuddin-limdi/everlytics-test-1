@@ -1,0 +1,132 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.fields {
+  border: 1px solid black;
+  padding: 20px 0;
+  padding-left: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.field-wrapper {
+  display: flex;
+  width: fit-content;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.field {
+  border-left: 1px solid black;
+  padding-left: 10px;
+  padding-right: 40px;
+  width: 250px;
+}
+.field input {
+  width: 100%;
+  padding: 10px 2px;
+  border: 0;
+  border-radius: 0;
+  background-color: #f3f3f3;
+  color: #afafaf;
+}
+
+.field input::placeholder {
+  color: #ccc;
+}
+
+.field input[readonly] {
+  background-color: #fff;
+}
+
+.field input[type="password"] {
+  background-color: #cccccc;
+  color: #cccccc;
+  caret-color: #fff;
+}
+
+.field input:focus-visible {
+  outline: none;
+}
+
+.bottom_buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.bottom_buttons button {
+  background-color: #70a7dc;
+  box-shadow: none;
+  border: none;
+  padding: 10px 30px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.bottom_buttons button:hover {
+  background-color: #5395d2;
+}
+
+.bottom_buttons button:nth-child(2) {
+  width: 254px;
+  margin-right: 36px;
+  margin-left: 10px;
+}
+
+.validation_string {
+  color: red;
+  font-size: 12px;
+  max-width: 250px;
+  margin-right: 40px;
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .field-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .field {
+    border: none;
+    padding: 0;
+  }
+
+  .field input {
+    padding-right: 0;
+    width: calc(100% - 2px);
+  }
+
+  .fields {
+    align-items: center;
+    padding: 10px;
+  }
+
+  .bottom_buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bottom_buttons button {
+    width: 100%;
+  }
+  .bottom_buttons button:nth-child(2) {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .validation_string {
+    margin-right: 0;
+  }
+}
